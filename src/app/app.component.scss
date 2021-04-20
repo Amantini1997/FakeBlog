@@ -1,0 +1,45 @@
+header {
+    background-color: gray;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: larger;
+    color: white;
+    padding: 0 20px;
+
+    .logout-btn {
+        cursor: pointer;
+        & .logout-text {
+            margin-right: 20px;
+        }
+    }
+}
+
+.error-ctn {
+    color: black;
+    height: fit-content;
+    width: fit-content;
+    box-shadow: -1px 6px 12px -7px;
+    margin: auto;
+
+    & > .error {
+        animation: fade-in 2s;
+        text-align: center;
+        width: 200px;
+        margin-top: 40px;
+        background: #ff4444;
+        color: white;
+        font-size: large;
+        font-weight: 500;
+        padding: 40px;
+        margin-bottom: 0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: .2;
+    } to {
+        opacity: 1;
+    }
+}

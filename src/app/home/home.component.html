@@ -1,0 +1,29 @@
+<h1>Posts</h1>
+
+<div class="posts-ctn flex-col" >
+    <ng-container *ngIf="posts; else skeleton">
+        <div *ngFor="let post of posts" 
+                class="blog-element"
+                routerLink="post" [queryParams]="{id: post.id}"
+        >
+            <img src="https://picsum.photos/seed/picsum/200/200" 
+                 class="avatar"
+                 alt="author picture">
+            <div class="blog-element__content">
+                <div class="title">{{post.title}} <span class="separator">|</span> {{post.userId}}</div>
+                <div class="body">{{getDisplayableLine(post.body)}}</div>
+            </div>
+        </div>
+    </ng-container>
+    <ng-template #skeleton>
+        <div *ngFor="let post of [0, 0, 0]" 
+                class="blog-element"
+        >
+            <div class="loader avatar"></div>
+            <div class="blog-element__content">
+                <div class="title loader"></div>
+                <div class="body loader"></div>
+            </div>
+        </div>
+    </ng-template>
+</div>

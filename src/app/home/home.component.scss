@@ -1,0 +1,18 @@
+.posts-ctn {
+    font-size: large;
+
+    & > .blog-element {
+        cursor: pointer;
+
+        .avatar {
+            width: 200px;
+            height: 200px;
+        }
+    
+        .separator {
+            font-size: xx-large;
+            font-weight: 900;
+        }
+    }
+
+}

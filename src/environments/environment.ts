@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  USERNAME: "user",
+  PASSWORD: "pass",
+  lastActiveTime: "LAT",
+  isLogged: "logged",
+  isLoggedValue: "1",
+  isRemembered: "rememberMe",
+  isRememberedValue: "1",
+  commentEmail: "email",
+  commentName: "Label",
+  server: "http://localhost:3000"
 };
 
 /*

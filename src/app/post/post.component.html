@@ -1,0 +1,32 @@
+<ng-container *ngIf="post; else skeleton">
+    <img src="https://picsum.photos/seed/picsum/130/130" 
+         class="loader avatar"
+         alt="author picture">
+    <div class="flex-col post">
+            <div class="post__title">{{post.title}}</div>
+            <div class="post__body">{{post.body}}</div>
+    </div>
+</ng-container>
+<ng-template #skeleton>
+    <div class="loader avatar"></div>
+    <div class="flex-col post">
+            <div class="post__title loader"></div>
+            <div class="post__body loader"></div>
+    </div>
+</ng-template>
+
+<div class="comment-section flex-col">
+    <span class="title-label">Comments</span>
+    <div *ngFor="let comment of post.comments"
+         class="blog-element">
+        <img src="https://picsum.photos/seed/picsum/130/130" alt="comment author picture">
+        <div class="blog-element__content">
+            <div class="title">Label</div>
+            <div class="body">{{comment.body}}</div>
+        </div>
+    </div>
+    <br>
+    <span class="title-label">Add a comment</span>
+    <textarea #comment id="comment" placeholder="TextArea"></textarea>
+    <button (click)="addComment(comment.value);comment.value = ''">Send</button>
+</div>
