@@ -1,8 +1,21 @@
+@import '../../styles.scss';
+@import '../../variables.scss';
+
+
 .posts-ctn {
+    @extend .flex-col;
+    align-items: center;
     font-size: large;
 
-    & > .blog-element {
+    > .blog-element {
+        margin: inherit auto;
         cursor: pointer;
+        width: $content-width;
+
+
+        @media screen and (max-width: 1200px) {
+            width: $content-width-m;
+        }
 
         .avatar {
             width: 200px;

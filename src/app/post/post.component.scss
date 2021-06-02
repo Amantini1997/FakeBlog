@@ -1,14 +1,22 @@
+@import "../../variables.scss";
+@import "../../styles.scss";
+
 $element-vertical-margin: 60px;
 
 :host {
-    display: flex;
-    flex-direction: column;
-    padding: 100px;
+    @extend .flex-col;
+    margin: 100px auto;
+    width: $content-width;
 
-    & > * {
+    @media screen and (max-width: 1200px) {
+        width: $content-width-m;
+    }
+
+    > * {
         margin-bottom: $element-vertical-margin;
     }
 }
+
 
 .avatar {
     min-width: 130px;
@@ -23,7 +31,7 @@ $element-vertical-margin: 60px;
         text-align: center;
         font-size: x-large;
         font-weight: 400;
-        margin-bottom: $element-vertical-margin;
+        margin: $element-vertical-margin;
         min-height: 35px;
     } 
 
@@ -32,31 +40,35 @@ $element-vertical-margin: 60px;
     }
 }
 
-.comment-section img {
-    width: 90px;
-    height: 90px;
-}
+.comment-section {
+    @extend .flex-col;
 
-.title-label {
-    font-weight: 600;
-}
+    > * {
+        margin-left: 15px;
+        margin-bottom: 30px;
+    }
+    
 
-.title-label, 
-textarea {
-    margin-left: 15px;
-    margin-bottom: 30px;
-}
-
-textarea {
-    height: 60px;
-    padding: 10px;
-    resize: none;
-
-    & + button {
+    img {
         width: 90px;
-        align-self: flex-end;
-        margin-right: 20px;
-        border-radius: 5px;
-        border: solid 1px gray;
+        height: 90px;
+    }
+
+    .title-label {
+        font-weight: 600;
+    }
+    
+    textarea {
+        height: 60px;
+        padding: 10px;
+        resize: none;
+    
+        + button {
+            width: 90px;
+            align-self: flex-end;
+            margin-right: 20px;
+            border-radius: 5px;
+            border: solid 1px gray;
+        }
     }
 }

@@ -40,7 +40,7 @@ export class AppComponent {
   }
 
   hideHome(): boolean {
-    console.log("_________", this.router.url)
+    // console.log("_________", this.router.url)
     return !this.router.url.startsWith('/home/post');
   }
 

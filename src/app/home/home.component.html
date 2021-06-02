@@ -1,6 +1,6 @@
 <h1>Posts</h1>
 
-<div class="posts-ctn flex-col" >
+<div class="posts-ctn">
     <ng-container *ngIf="posts; else skeleton">
         <div *ngFor="let post of posts" 
                 class="blog-element"
@@ -16,7 +16,7 @@
         </div>
     </ng-container>
     <ng-template #skeleton>
-        <div *ngFor="let post of [0, 0, 0]" 
+        <div *ngFor="let post of [0,0,0]" 
                 class="blog-element"
         >
             <div class="loader avatar"></div>

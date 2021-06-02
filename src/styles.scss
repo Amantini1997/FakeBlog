@@ -43,19 +43,19 @@ img {
     &__content {
         @extend .flex-col;
 
-        & > .title {
+        > * {
             margin: 0 25px;
         }
             
-        & > .body {
-            margin: 17px;
+        > .body {
+            margin-top: 17px;
             color: gray;
         }
     }
 }
 
 .loader {
-    animation: fadeinout 1s infinite ease-in-out alternate;
+    animation: fade-in-out 1s infinite ease-in-out alternate;
 
     &.title {
         width: 100px;
@@ -68,7 +68,7 @@ img {
     }
 }
 
-@keyframes fadeinout {
+@keyframes fade-in-out {
     from {
         background-color: rgb(240, 240, 240);
     } to {

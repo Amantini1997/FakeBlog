@@ -22,7 +22,7 @@ header {
     box-shadow: -1px 6px 12px -7px;
     margin: auto;
 
-    & > .error {
+    > .error {
         animation: fade-in 2s;
         text-align: center;
         width: 200px;

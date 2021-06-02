@@ -4,9 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` to start the application. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` to start the front-end. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 Run `json-server --watch db.json` to start the mock server. Navigate to `http://localhost:3000/` to see the data stored.
+
+Run `node start` to fire both together.
 
 ## Credentials
 
