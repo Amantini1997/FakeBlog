@@ -29,6 +29,6 @@ export class BlogService {
     const headers = { 'content-type': 'application/json' };
     post.comments = [...post.comments, comment];
     const body = JSON.stringify(post);
-    return this.http.put(environment.server + '/posts/' + post.id, body, {'headers':headers}) as any;
+    return this.http.post(environment.server + '/posts/' + post.id, body, {'headers':headers}) as any;
   } 
 }
